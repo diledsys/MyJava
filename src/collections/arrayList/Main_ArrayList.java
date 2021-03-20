@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class Main {
+public class Main_ArrayList {
 
     public static void main(String[] args) {
 
@@ -15,23 +15,44 @@ public class Main {
         arrayList.add("Mg");
         arrayList.add("Cr");
         arrayList.add("Si");
+        //
         int size = arrayList.size();
+        //
         String getObjectByIndex = arrayList.get(3);
-        arrayList.add(8,"addElement");
+        //
+        arrayList.add(8, "addElement");
+        //
         arrayList.sort(String::compareTo);
+        //
         System.out.println(Arrays.toString(arrayList.toArray()));
+        //
         arrayList.remove("Mg");
+        //
         Boolean isObject = arrayList.contains("Cr");
-        arrayList.set(4,"newElement");
+        //
+        arrayList.set(4, "newElement");
+        //
         int index = arrayList.indexOf("Fe");
+        //
         boolean isEmpty = arrayList.isEmpty();
+        //
         Iterator iterator = arrayList.iterator();
-        while (iterator.hasNext()){
+        //
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
-        for (int i = 0; i <arrayList.size() ; i++) {
+        //
+        for (int i = 0; i < arrayList.size(); i++) {
             arrayList.get(i);
         }
+        //
+        for (String str : arrayList) {
+            System.out.println(str);
+        }
+        //
+        arrayList.forEach(str -> System.out.println(str));
 
+        //
+        arrayList.forEach(System.out::println);
     }
 }
