@@ -17,13 +17,10 @@ public class MyLinkedList<E> extends MyArrayList implements MyDeque {
     public void addFirst(Object o) {
         Node node = new Node();
         node.element = o;
-        if (head == null) {
-            head = node;
-            last = node;
-        } else {
+        if (head != null) {
             node.next = head;
-            head = node;
         }
+        head = node;
         size++;
     }
 
@@ -31,13 +28,10 @@ public class MyLinkedList<E> extends MyArrayList implements MyDeque {
     public void addLast(Object o) {
         Node node = new Node();
         node.element = o;
-        if (head == null) {
-            head = node;
-            last = node;
-        } else {
+        if (last != null) {
             node.next = last;
-            last = node;
         }
+        last = node;
         size++;
     }
 

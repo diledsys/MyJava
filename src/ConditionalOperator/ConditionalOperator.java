@@ -15,8 +15,14 @@ public class ConditionalOperator {
         } else System.out.println("b=" + b);
 
         System.out.println(a < b);
-
-        int c = (a < b) ? a : b;
+            //variant1
+        int c = Math.min(a, b);
+        //variant2
+        int d;
+        if (a >= b) d = b;
+        else d = a;
+        //variant3
+        int e = (a < b) ? a : b;
         System.out.println("c="+c);
 
     }
