@@ -13,6 +13,7 @@ public class Main {
                 char ch = (char) fis.read();
                 System.out.println(ch);
             }
+            fis.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

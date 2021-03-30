@@ -16,7 +16,8 @@ public class Main {
         }
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File("c:\\book.txt")));
-            String sPrint =br.readLine();
+            String sPrint = br.readLine();
+            br.close();
             System.out.println(sPrint);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -29,6 +30,7 @@ public class Main {
                 char ch=(char) bris.read();
                 System.out.println(ch);
             }
+            bris.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
